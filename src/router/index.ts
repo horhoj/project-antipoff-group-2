@@ -1,3 +1,2 @@
 export * from './router';
-export * from './routeList';
-export * from './helpers';
+export * from './routePaths';
