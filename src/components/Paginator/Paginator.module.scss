@@ -1,0 +1,25 @@
+.Paginator {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  transition: transform 200ms;
+  cursor: pointer;
+  background-color: #ddd;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.buttonActive {
+  background-color: #512689;
+  color: #fff;
+}
+

@@ -1,0 +1,71 @@
+.Header {
+  min-height: 264px;
+  background-color: #512689;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.button {
+  transition: transform 200ms;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  top: 32px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+
+  @media (max-width: 600px) {
+    width: 30px;
+    height: 30px;
+    border: none;
+
+
+    &:hover {
+      background-color: #512689;
+    }
+  }
+}
+
+.backButton {
+  left: 80px;
+
+  @media (max-width: 800px) {
+    left: 27px;
+    top: 23px;
+  }
+}
+
+.exitButton {
+  right: 80px;
+
+  @media (max-width: 800px) {
+    right: 27px;
+    top: 23px;
+  }
+}
+
+.buttonText {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.buttonIcon {
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
