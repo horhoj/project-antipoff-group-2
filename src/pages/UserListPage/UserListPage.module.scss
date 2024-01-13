@@ -1,4 +1,6 @@
-.UserListPage {}
+.UserListPage {
+  padding-bottom: 40px;
+}
 
 .userList {
   display: flex;
@@ -6,6 +8,10 @@
   gap: 20px;
   padding: 48px 80px;
   justify-content: center;
+
+  @media (max-width: 1100px) {
+    padding: 20px;
+  }
 }
 
 .bigTitle {

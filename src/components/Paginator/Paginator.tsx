@@ -1,24 +1,36 @@
 import classNames from 'classnames';
+import { useMemo } from 'react';
 import styles from './Paginator.module.scss';
 import { getUUID } from '~/utils/getUUID';
 
 interface PaginatorProps {
-  children?: React.ReactNode;
+  onPaginate: (page: number) => void;
+  maxPage: number;
+  currentPage: number;
 }
 
-const BTNS_LIST = Array(6)
-  .fill(null)
-  .map(() => getUUID());
+export function Paginator({
+  currentPage,
+  maxPage,
+  onPaginate,
+}: PaginatorProps) {
+  const btnsList = useMemo(
+    () =>
+      Array(maxPage)
+        .fill(null)
+        .map(() => getUUID()),
+    [maxPage],
+  );
 
-export function Paginator({ children }: PaginatorProps) {
   return (
     <div className={styles.Paginator}>
-      {BTNS_LIST.map((id, index) => (
+      {btnsList.map((id, index) => (
         <button
+          onClick={() => onPaginate(index + 1)}
           key={id}
           className={classNames(
             styles.button,
-            index === 0 && styles.buttonActive,
+            index + 1 === currentPage && styles.buttonActive,
           )}
         >
           {index + 1}

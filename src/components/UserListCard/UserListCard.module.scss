@@ -12,6 +12,8 @@
   transition: transform 200ms;
   background-color: #fff;
   cursor: pointer;
+  text-decoration: none;
+  color: #222;
 
   &:hover {
     transform: scale(1.1);
